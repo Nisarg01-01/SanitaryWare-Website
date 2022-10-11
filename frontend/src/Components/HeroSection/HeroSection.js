@@ -22,11 +22,7 @@ const HeroSection = ({ title }) => {
         </div>
         <div className="herosection__right">
           <figure>
-            <img
-              src="Showroom Project\frontend\public\CompanyLogo.png"
-              alt="ShopImage"
-              className="imgsrc"
-            />
+            <img src="images/companypic.png" alt="ShopImage" className="imgsrc" />
           </figure>
         </div>
       </div>
