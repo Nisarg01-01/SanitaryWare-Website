@@ -8,11 +8,29 @@ const OrderSchema = new Schema({
         ref:'User',
         required: [true, 'User ID is required']
     },
-    Product_id: {
-        type:Schema.Types.ObjectId,
-        ref:'Product',
-        required: [true, 'Product ID is required']
-    },
+
+    Products:[
+        {
+        Product_name: {
+            type: String,
+            required: [true, 'Product Name is required']
+        },
+        Company_name: {
+            type: String,
+            required: [true, 'Company Name is required']
+        },
+        Product_no: {
+            type: Number,
+            unique: true,
+            required: [true, 'Product Number is required']
+        },
+        Qty: {
+            type: Number,
+            required: [true, 'Quantity is required']
+        }
+    }
+    ],
+   
     date: {
         type: Date,
         required: [true, 'Date is required']
@@ -20,27 +38,7 @@ const OrderSchema = new Schema({
     Paymentstatus: {
         type: String,
         required: [true, 'Payment Status is required']
-    },
-    Orders:[{
-        Order_no: {
-            type: Number,
-            required: [true, 'Order Number is required']
-        },
-        Qty: {
-            type: Number,
-            required: [true, 'Quantity is required']
-        },
-        Discount: {
-            type: Number,
-            default: 0
-            
-        }, 
-        Price: {
-            type: Number,
-            required: [true, 'Price is required']
-        },
-        
-        }]
+    }
     
 });
 

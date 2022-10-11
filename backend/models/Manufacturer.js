@@ -2,24 +2,31 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 // create manufacturer schema & model
-const ManufacturerSchema = new Schema({
-    Manufacturers:[{      
-        Product_id: {
-            type:Schema.Types.ObjectId,
-            ref:'Product',
-            required: [true, 'Product ID is required']
+const ManufacturerSchema = new Schema({   
+        name: {
+            type: String,
+            require: [true, 'Name field is required']
         },
-        Qty: {
-            type: Number,
-            required: [true, 'Quantity is required']
+        contact_details: [{
+            mobile: {
+                type: Number,
+                require: [true, 'Mobile number is required']
+            },
+            email: {
+                type: String,
+                require: [true, 'Email is required']
+            },
+        }],
+        address: {
+            type: String,
+            require: [true, 'Address is required']
         },
-        Price: {
+        pincode: {
             type: Number,
-            required: [true, 'Price is required']
+            require: [true, 'Pincode is required']
         }
-        
-        }]
-    
+      
+
 });
 
 const User = mongoose.model('Manufacturer',ManufacturerSchema);

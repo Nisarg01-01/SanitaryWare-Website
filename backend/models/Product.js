@@ -3,17 +3,14 @@ const Schema = mongoose.Schema;
 
 // create Product schema & model
 const ProductSchema = new Schema({
-    Order_id: {
-        type:Schema.Types.ObjectId,
-        ref:'Order',
-        required: [true, 'Order ID is required']
-    },
+  
     Manufacturer_id: {
         type:Schema.Types.ObjectId,
         ref:'Manufacturer',
         required: [true, 'Manufacturer ID is required']
     },
-    Products:[{
+        
+   
         Product_name: {
             type: String,
             required: [true, 'Product Name is required']
@@ -24,6 +21,7 @@ const ProductSchema = new Schema({
         },
         Product_no: {
             type: Number,
+            unique: true,
             required: [true, 'Product Number is required']
         },
         Qty: {
@@ -32,17 +30,11 @@ const ProductSchema = new Schema({
         },
         Feature: {
             type: String,
-            required: [true, 'Feature is required']
+            required: [false, 'Feature is required']
         }, 
         Price: {
             type: Number,
             required: [true, 'Price is required']
-        },
-        
-        }],
-        Item_sold: {
-            type: Number,
-            default: 0
         }
     
 });
