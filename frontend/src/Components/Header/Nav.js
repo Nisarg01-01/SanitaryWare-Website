@@ -8,7 +8,7 @@ const Nav = () => {
   return (
     <header className="Nav">
       <NavLink to="/" className="Logo">
-        <img src="../CompanyLogo.png" alt="logo" />
+        <img src="images/CompanyLogo.png" alt="logo" className="imglogo"/>
       </NavLink>
       <nav>
         <ul className="List">

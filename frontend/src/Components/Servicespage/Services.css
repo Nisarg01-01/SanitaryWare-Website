@@ -6,14 +6,12 @@
 
 .grid3Col__item{
     width: auto;
-    gap: 2rem;
+    gap: 4rem;
     height: auto;
     display: flex;
-    flex-direction: 33.33%;
     justify-content: center;
     align-content: center;
     text-align: center;
-    border-radius: 2rem;
     box-shadow: rgba(0, 0, 0, 0.05) 0px 1px 2px 0px;
 
 }
@@ -21,11 +19,11 @@
 .items{
     /* background-color: #61dafb; */
     background-color: black;
-    padding: 2rem;
-    height: 11rem;
-    width: 10rem;
+    padding: 1.5rem;
+    height: 10rem;
+    width: 9rem;
     margin: auto;
-    border-radius: 3rem;
+    border-radius: 2.5rem;
     color: white;
 }
 

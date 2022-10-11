@@ -43,12 +43,13 @@ Button{
 .Trusted{
   display: flex;
   flex-direction: row;
+  gap: 3rem;
   justify-content: center;
   background-color: darkgray;
-  padding: 2rem;
+  padding-bottom: 2rem;
   margin: 0 auto;
   max-width: auto;
-}
+} 
 
 .Services{
   display: grid;

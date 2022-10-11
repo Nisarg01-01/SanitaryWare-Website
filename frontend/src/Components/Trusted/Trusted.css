@@ -1,0 +1,16 @@
+.trusted{
+    text-align: center;
+}
+
+.trusted__logos{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 3rem;
+    max-width: auto;
+}
+
+.trusted__logos img{
+    width: 7rem;
+    height: 75px;
+}
