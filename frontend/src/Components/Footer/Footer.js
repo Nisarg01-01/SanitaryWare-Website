@@ -33,8 +33,6 @@ const Footer = () => {
             <h4>SOCIAL MEDIA</h4>
             <ui className="list-unstyled">
               <li className="listitem">
-                {/* icon of different social media */}
-                
               </li>
             </ui>
           </div>
