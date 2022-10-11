@@ -10,6 +10,7 @@ import SingleProduct from "./Pages/Singleproduct";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import ErrorPage from "./Pages/ErrorPage";
 
 function App() {
   return (
@@ -25,7 +26,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/SingleProduct" element={<SingleProduct />} />
-            <Route path="*" element={<h1>404 Not Found</h1>} />
+            <Route path="*" element={<ErrorPage/>} />
           </Routes>
         </div>
         <Footer />
