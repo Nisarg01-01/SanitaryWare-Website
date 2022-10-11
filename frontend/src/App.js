@@ -4,7 +4,6 @@ import Contact from "./Pages/Contact";
 import Tiles from "./Pages/Tiles";
 import Footer from "./Components/Footer/Footer";
 import Nav from "./Components/Header/Nav";
-import Category from "./Pages/Category";
 import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import SingleProduct from "./Pages/Singleproduct";
@@ -20,7 +19,6 @@ function App() {
         <div className="content-wrap">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/category" element={<Category />} />
             <Route path="/Tiles" element={<Tiles />} />
             <Route path="/product" element={<Product />} />
             <Route path="/aboutus" element={<About />} />

@@ -45,7 +45,7 @@ Button{
   flex-direction: row;
   gap: 3rem;
   justify-content: center;
-  background-color: darkgray;
+  background-color: lightgray;
   padding-bottom: 2rem;
   margin: 0 auto;
   max-width: auto;
