@@ -1,0 +1,45 @@
+.Contact{
+    padding: 1rem 0 2rem 0;
+    text-align: center;
+}
+
+.CommanTitle{
+    font-size: 3rem;
+    font-weight: 450;
+    color: #000;
+    margin-bottom: 1rem;
+}
+
+.container{
+    margin-top: rem;
+}
+
+.contact-form{
+    max-width: 35rem;
+    margin: auto;
+}
+
+.contact-inputs{
+    margin-top: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+}
+
+.contact-inputs input{
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-inputs textarea{
+    padding: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-family: inherit;
+}
+
+
+

@@ -4,13 +4,13 @@ import Contact from "./Pages/Contact";
 import Tiles from "./Pages/Tiles";
 import Footer from "./Components/Footer/Footer";
 import Nav from "./Components/Header/Nav";
-import Category from "./Pages/Category";
 import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import SingleProduct from "./Pages/Singleproduct";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
+import ErrorPage from "./Pages/ErrorPage";
 
 function App() {
   return (
@@ -20,14 +20,13 @@ function App() {
         <div className="content-wrap">
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/category" element={<Category />} />
             <Route path="/Tiles" element={<Tiles />} />
             <Route path="/product" element={<Product />} />
             <Route path="/aboutus" element={<About />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/SingleProduct" element={<SingleProduct />} />
-            <Route path="*" element={<h1>404 Not Found</h1>} />
+            <Route path="*" element={<ErrorPage/>} />
           </Routes>
         </div>
         <Footer />

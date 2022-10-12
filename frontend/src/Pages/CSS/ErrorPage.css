@@ -1,0 +1,21 @@
+.container{
+    padding: 5rem;
+    text-align: center;
+}
+
+.h1{
+    font-size:6rem;
+}
+
+.h2{
+    font-size:3rem;
+}
+
+.p{
+    margin: 2rem 0;
+}
+
+.btn a{
+    color: white;
+    text-decoration: none;
+}
