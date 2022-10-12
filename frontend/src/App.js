@@ -7,6 +7,7 @@ import Nav from "./Components/Header/Nav";
 import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import SingleProduct from "./Pages/Singleproduct";
+import Feedback from "./Pages/Feedback";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
