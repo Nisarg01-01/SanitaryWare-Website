@@ -1,0 +1,19 @@
+.searchbar {
+    max-width: 25rem;
+    display: flex;
+    margin-bottom: auto;
+    margin-top: auto;
+    height: 2rem;
+    background-color: white;
+  }
+  
+ 
+  .search-input {
+    color: black;
+    border: 0;
+    outline: 0;
+    background: none;
+    padding: 0px 15px;
+    transition: width 0.4s linear;
+    caret-color: black;
+  }
