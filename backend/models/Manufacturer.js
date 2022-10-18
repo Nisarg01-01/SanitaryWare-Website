@@ -22,6 +22,6 @@ const ManufacturerSchema = new Schema({
     
 });
 
-const User = mongoose.model('Manufacturer',ManufacturerSchema);
+const Manufacturer = mongoose.model('Manufacturer',ManufacturerSchema);
 
 module.exports = Manufacturer;

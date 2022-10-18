@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useLocation } from "react-router-dom";
 import "./CSS/SingleProd.css";
 
@@ -14,7 +14,7 @@ const Singleproduct = ({num}) => {
       product_name: "Tape",
       company_name: "Jaquar",
       product_no: 123,
-      qty: 500,
+      qty: 0,
       feature: "Black Glossy",
       price: 1000
     },
@@ -28,7 +28,7 @@ const Singleproduct = ({num}) => {
       product_name: "Shower",
       company_name: "Jaquar",
       product_no: 321,
-      qty: 0,
+      qty: 550,
       feature: "Silver Coated",
       price: 2000
     },
@@ -67,9 +67,9 @@ const Singleproduct = ({num}) => {
           <h3 className="text">Company Name:{SingleProduct.company_name}</h3>
           <h3 className="text">Description: {SingleProduct.feature}</h3>
           <h3 className="text">Availability: {SingleProduct.qty>0?"In Stock" : "Not Available"}</h3>
-          <button type="submit" className="btn">
+          {SingleProduct.qty>0 && <button type="submit" className="btn">
               Add to Cart
-        </button>
+        </button>}
         </div>
       </div>
     </div>

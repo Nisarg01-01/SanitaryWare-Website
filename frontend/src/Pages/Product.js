@@ -90,18 +90,51 @@ const Product = () => {
     },
   ];
 
-  const num = 123;
+  // const num = 123;
   return (
     <div className="Filter-prod">
-      {/* <div>
-        <h1>Filter</h1>
-      </div> */}
+      <div className="Filter">
+        {/* create filter ui for product page */}
+        <div className="Filter-1">
+          <h3>Filter</h3>
+          <div className="Filter-1-1">
+            <h4>Price</h4>
+            <div className="Filter-1-1-1">
+              <input type="text" placeholder="Min" />
+              <input type="text" placeholder="Max" />
+            </div>
+          </div>
+          <div className="Filter-1-2">
+            <h4>Company</h4>
+            <div className="Filter-1-2-1">
+              <input type="checkbox" />
+              <label>Jaquar</label>
+              <input type="checkbox" />
+              <label>Cera</label>
+              <input type="checkbox" />
+              <label>Parryware</label>
+              <input type="checkbox" />
+              <label>Kohler</label>
+            </div>
+          </div>
+          <div className="Filter-1-3">
+            <h4>Product</h4>
+            <div className="Filter-1-3-1">
+              <input type="checkbox" />
+              <label>Tape</label>
+              <input type="checkbox" />
+              <label>Shower</label>
+              <input type="checkbox" />
+              <label>Wash Basin</label>
+            </div>
+          </div>
+        </div>
+      </div>
       <div className="ProdContainer">
         {/* create card to display multiple products from product list */}
         {product.map((item, index) => (
-          <div className="card" key={index}>
-            <NavLink to="/SingleProduct" state={item._id.$oid} className="Link">
-              <div className="card-col">
+          <NavLink to="/SingleProduct" state={item._id.$oid} className="Link">
+            <div className="card" key={index}>
                 <div className="image">
                   <img src="images/Kohler.jpg" alt={item.product_name} />
                 </div>
@@ -109,9 +142,8 @@ const Product = () => {
                   <h1 className="prodname">{item.product_name}</h1>
                   <h3 className="price">Price: {item.price}</h3>
                 </div>
-              </div>
-            </NavLink>
-          </div>
+            </div>
+          </NavLink>
         ))}
       </div>
     </div>
