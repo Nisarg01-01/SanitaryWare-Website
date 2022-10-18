@@ -13,7 +13,9 @@ app.get('/', (req, res) => {
   res.send('Hello World!')
 })
 
-// app.use('/api/wholesaler', require('./routes/wholesaler'));
+
+// Available routes
+app.use('/api/products', require('./routes/product'));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);

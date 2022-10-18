@@ -14,33 +14,33 @@ const ProductSchema = new Schema({
         required: [true, 'Manufacturer ID is required']
     },
     Products:[{
-        Product_name: {
+        product_name: {
             type: String,
             required: [true, 'Product Name is required']
         },
-        Company_name: {
+        company_name: {
             type: String,
             required: [true, 'Company Name is required']
         },
-        Product_no: {
+        product_no: {
             type: Number,
             required: [true, 'Product Number is required']
         },
-        Qty: {
+        qty: {
             type: Number,
             required: [true, 'Quantity is required']
         },
-        Feature: {
+        feature: {
             type: String,
             required: [true, 'Feature is required']
         }, 
-        Price: {
+        price: {
             type: Number,
             required: [true, 'Price is required']
         },
         
         }],
-        Item_sold: {
+        item_sold: {
             type: Number,
             default: 0
         }
