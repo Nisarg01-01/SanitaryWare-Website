@@ -1,0 +1,58 @@
+.SP-container{
+    padding: 5rem 0;
+}
+
+.grid-two-column{
+    margin-left: 20%;
+    align-items: center;
+    grid-template-columns: 1fr 1fr;
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+}
+
+.SP-image img{ 
+    width: 25rem;
+    height: 13rem;
+    border: #000;
+    border-style: ridge;
+    padding: 1rem;
+    border-radius: 3rem;
+}
+
+.SP-details{
+    text-justify: auto;
+    margin: 0 2rem;
+}
+
+.proname{
+    /* border-radius: 1rem 0 1rem 0; */
+    background-color: black;
+    color: white;
+    padding: 0 25px;
+    width: 15rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+.text{
+    font-weight: 100;
+    color: #000;
+}
+
+.pricearea{
+    font-size: 1.5rem;
+    color: midnightblue;
+    font-weight: 1000;
+}
+
+.btn{
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    font-weight: 600;
+    margin: 1rem 0;
+    cursor: pointer;
+}
+
+
+

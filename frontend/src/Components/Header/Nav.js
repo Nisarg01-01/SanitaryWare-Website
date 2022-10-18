@@ -2,6 +2,7 @@ import React from "react";
 import { NavLink } from "react-router-dom";
 import "./Header.css";
 import { FiShoppingCart } from "react-icons/fi";
+import Search from "../Search bar/Search";
 
 
 const Nav = () => {
@@ -12,9 +13,9 @@ const Nav = () => {
       </NavLink>
       <nav>
         <ul className="List">
-          <li>
+          {/* <li>
             <NavLink to="/category">Category</NavLink>
-          </li>
+          </li> */}
           <li>
             <NavLink to="/Tiles">Tiles</NavLink>
           </li>
@@ -26,6 +27,9 @@ const Nav = () => {
           </li>
           <li>
             <NavLink to="/contact">Contact</NavLink>
+          </li>
+          <li>
+            <Search/>
           </li>
           <li>
             <NavLink to="/cart" className="trolleyandcount">

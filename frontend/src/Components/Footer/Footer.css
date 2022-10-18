@@ -9,6 +9,10 @@
   width: 100%;
 }
 
+.list-unstyled{
+    background-color: #0F0F0F;
+}
+
 .list-unstyled a{
   color: white;
   text-decoration: none;
