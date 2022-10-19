@@ -35,7 +35,18 @@ const ProductSchema = new Schema({
         Price: {
             type: Number,
             required: [true, 'Price is required']
+        },
+        Product_img: {
+            type: String
+        },
+        Product_cat: {
+            type: String,
+            required: [true, 'Category is required']
+        },
+        Product_sub_cat: {
+            type: String
         }
+          
     
 });
 
