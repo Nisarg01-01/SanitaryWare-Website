@@ -1,7 +1,7 @@
 body {
     text-align: center;
     font-family: 'Roboto', sans-serif;
-    background-image: './Images/image1.jpeg';
+    background-image: './frontend/src/Images/image1.jpeg';
   }
   
   .button_style {
@@ -9,10 +9,10 @@ body {
     margin-right: 10px;
   }
   
-  .centerTable {
+  /* .centerTable {
     margin: 0px auto;
   }
-  
+   */
   h2 {
       color: #3f51b5;
   }

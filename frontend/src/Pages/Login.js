@@ -41,7 +41,7 @@ export default class Login extends React.Component {
 
   render() {
     return (
-      <div style={{ marginTop: '200px' }}>
+      <div style={{ marginTop: '200px' , marginBottom: '200px'}}>
         <div>
           <h2>Login</h2>
         </div>
