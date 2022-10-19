@@ -45,7 +45,7 @@ router.post(
       item_sold,
     } = req.body;
     try {
-      Product.findOne({product_no }).then((product) => {
+      Product.findOne({ product_no }).then((product) => {
         if (product)
           return res.status(400).json({ msg: "Product already exists" });
       });
@@ -59,8 +59,8 @@ router.post(
         item_sold,
       });
       const product = await newProduct.save();
-      console.log(req.body);
-      res.json({ message: req.body });
+      console.log(product);
+      // res.json(product);
     } catch (err) {
       console.error(err.message);
       res.status(500).send("Server Error");
@@ -79,6 +79,5 @@ router.get("/getproductbycompanyname", async (req, res) => {
     res.status(500).send("Server Error");
   }
 });
-
 
 module.exports = router;

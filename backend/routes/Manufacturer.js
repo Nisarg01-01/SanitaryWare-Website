@@ -7,11 +7,6 @@ const Product = require("../models/Product");
 const { check, validationResult } = require("express-validator");
 // const auth = require("../middleware/auth");
 
-router.get("/manufacturer", async (req, res) => {
-    Manufacturer.find()
-        .then((manufacturers) => res.json(manufacturers))
-        .catch((err) => res.status(404).json({ success: false }));
-});
 
 router.post(
     "/addmanufacturer",
@@ -40,5 +35,12 @@ router.post(
         }
     }
 );
+
+router.get("/getallmanufacturer", async (req, res) => {
+    Manufacturer.find()
+        .then((manufacturers) => res.json(manufacturers))
+        .catch((err) => res.status(404).json({ success: false }));
+});
+
 
 module.exports = router;

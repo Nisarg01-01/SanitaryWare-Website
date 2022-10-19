@@ -7,7 +7,7 @@ const Product = require("../models/Product");
 const { check, validationResult } = require("express-validator");
 // const auth = require("../middleware/auth");
 
-router.get("/order", async (req, res) => {
+router.get("/getallorder", async (req, res) => {
   Order.find()
     .then((orders) => res.json(orders))
     .catch((err) => res.status(404).json({ success: false }));
