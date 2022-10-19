@@ -73,7 +73,7 @@ export default class Register extends React.Component {
             id="standard-basic"
             type="tel"
             autoComplete="off"
-            name="Phonenumber"
+            name="phonenumber"
             value={this.state.phonenumber}
             onChange={this.onChange}
             placeholder="Phone Number"
