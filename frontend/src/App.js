@@ -8,6 +8,8 @@ import Product from "./Pages/Product";
 import Cart from "./Pages/Cart";
 import SingleProduct from "./Pages/Singleproduct";
 import Feedback from "./Pages/Feedback";
+import Login from "./Pages/Login";
+import Register from "./Pages/Registration";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import "./App.css";
@@ -19,7 +21,9 @@ function App() {
         <Nav />
         <div className="content-wrap">
           <Routes>
-            <Route path="/" element={<Home />} />
+            <Route path="/" element={<Login />} />
+            <Route path="/Home" element={<Home/>}/>
+            <Route path="/Registration" element={<Register/>}/>
             <Route path="/Tiles" element={<Tiles />} />
             <Route path="/product" element={<Product />} />
             <Route path="/aboutus" element={<About />} />
