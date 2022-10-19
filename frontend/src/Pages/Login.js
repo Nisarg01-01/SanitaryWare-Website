@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+// import image from "/image1.jpeg";
 import swal from 'sweetalert';
 import { Button, TextField, Link } from '@material-ui/core';
 import './CSS/Login.css'
@@ -40,8 +41,13 @@ export default class Login extends React.Component {
   }
 
   render() {
+  //   const myStyle={
+  //     backgroundImage: "./Images/image1.jpeg",
+  // };
     return (
-      <div style={{ marginTop: '200px' , marginBottom: '200px'}}>
+      <div style= {{backgroundImage:"url(images/image1.jpeg)", backgroundRepeat:"no-repeat",backgroundSize: "cover",
+      height: "100vh"}}>
+      <div style={{marginTop: '200px' , marginBottom: '200px'}}>
         <div>
           <h2>Login</h2>
         </div>
@@ -83,6 +89,7 @@ export default class Login extends React.Component {
             Register
           </Link>
         </div>
+      </div>
       </div>
     );
   }
