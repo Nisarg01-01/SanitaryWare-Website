@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import image from "/image1.jpeg";
+// import image from "./image/image1.jpeg";
 import swal from 'sweetalert';
 import { Button, TextField, Link } from '@material-ui/core';
 import './CSS/Login.css'
@@ -45,9 +45,9 @@ export default class Login extends React.Component {
   //     backgroundImage: "./Images/image1.jpeg",
   // };
     return (
-      <div style= {{backgroundImage:"url(images/image1.jpeg)", backgroundRepeat:"no-repeat",backgroundSize: "cover",
+      <div style= {{backgroundImage:"url(./images/image1.jpeg)", backgroundRepeat:"no-repeat",backgroundSize: "cover",
       height: "100vh"}}>
-      <div style={{marginTop: '200px' , marginBottom: '200px'}}>
+      <div style={{marginTop: 'auto' , marginBottom: 'auto' , paddingTop : '200px' , paddingBottom : '200px'}}>
         <div>
           <h2>Login</h2>
         </div>

@@ -41,7 +41,9 @@ export default class Register extends React.Component {
 
   render() {
     return (
-      <div style={{ marginTop: '200px', marginBottom: '200px'}}>
+      <div style= {{backgroundImage:"url(./images/image1.jpeg)", backgroundRepeat:"no-repeat",backgroundSize: "cover",
+      height: "100vh"}}>
+      <div style={{marginTop: 'auto' , marginBottom: 'auto' , paddingTop : '200px' , paddingBottom : '200px'}}>
         <div>
           <h2>Register</h2>
         </div>
@@ -127,6 +129,7 @@ export default class Register extends React.Component {
             Login
           </Link>
         </div>
+      </div>
       </div>
     );
   }
