@@ -37,6 +37,7 @@ const Nav = () => {
               <span className="CartCount">10</span>
             </NavLink>
           </li>
+          
         </ul>
       </nav>
     </header>

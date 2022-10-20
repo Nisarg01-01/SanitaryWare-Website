@@ -42,5 +42,19 @@ router.get("/getallmanufacturer", async (req, res) => {
         .catch((err) => res.status(404).json({ success: false }));
 });
 
+// delete manufacturer
+router.delete("/deletemanufacturer/:id", async (req, res) => {
+    try {
+        let manufacturer = await Manufacturer.findById(req.params.id);
+        if (!manufacturer) return res.status(404).json({ msg: "Manufacturer not found" });
+        await Manufacturer.findByIdAndRemove(req.params.id);
+        res.json({ msg: "Manufacturer removed" });
+    } catch (err) {
+        console.error(err.message);
+        res.status(500).send("Server Error");
+    }
+});
+
+
 
 module.exports = router;
