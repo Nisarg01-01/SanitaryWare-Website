@@ -40,22 +40,22 @@ app.get("/userprofile",isLoggedIn ,(req,res) =>{
     res.render("userprofile");
 })
 //Auth Routes
-app.get("Login",(req,res)=>{
+app.get("/Login",(req,res)=>{
     res.render("login");
 });
 
-app.post("Login",passport.authenticate("local",{
+app.post("/Login",passport.authenticate("local",{
     successRedirect:"/userprofile",
     failureRedirect:"/login"
 }),function (req, res){
 
 });
 
-app.get("Register",(req,res)=>{
+app.get("/Registration",(req,res)=>{
     res.render("register");
 });
 
-app.post("Register",(req,res)=>{
+app.post("/Registration",(req,res)=>{
     
     User.register(new User({name: req.body.name,username:req.body.username,phonenumber:req.body.phonenumber,emailid:req.body.emailid}),req.body.password,function(err,user){
         if(err){

@@ -88,7 +88,7 @@ function Feedback() {
             <Button onClick={uploadWidget} className='button'>
 				{uploadPhotosButtonText}
 			</Button>
-			<Form onSubmit={handleSubmit}>
+			<Form action="https://formspree.io/f/mdojddww" method="POST">
 				{/* Name */}
 				<Form.Group>
 					<Form.Label>Name</Form.Label>
