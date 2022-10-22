@@ -64,9 +64,9 @@
   position: relative;
 }
 
-.UserIcon User{
+.User{
   position: relative;
-  font-size: 1.75rem;
+  font-size: 2rem;
   color: white;
 }
 

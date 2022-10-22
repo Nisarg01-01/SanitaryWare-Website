@@ -7,6 +7,30 @@ import {CgProfile} from "react-icons/cg";
 
 
 const Nav = () => {
+  // get userInfo from local storage
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  
+  // fetch cart count from backend
+  // const [cartCount, setCartCount] = React.useState(0);
+  // React.useEffect(() => {
+  //   if (userInfo) {
+  //     fetch(`http://localhost:4000/api/usercart/count/${userInfo.id}`)
+  //       .then((res) => res.json())
+  //       .then((data) => {
+  //         setCartCount(data);
+  //       })
+  //       .catch((err) => {
+  //         console.log("hello",err);
+  //       });
+  //   }
+  // }, [userInfo]);
+
+  // // Till cartcount is fetched from backend, show 0
+  // if (cartCount === null) {
+  //   setCartCount(0);
+  // }
+  
+
   return (
     <header className="Nav">
       <NavLink to="/Home" className="Logo">
@@ -35,7 +59,7 @@ const Nav = () => {
           <li>
             <NavLink to="/cart" className="trolleyandcount">
               <FiShoppingCart className="trolley" />
-              <span className="CartCount">10</span>
+              {/* <span className="CartCount">{cartCount}</span> */}
             </NavLink>
           </li>
           <li>

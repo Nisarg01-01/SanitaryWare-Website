@@ -2,7 +2,7 @@ import React from "react";
 import swal from "sweetalert";
 import { useNavigate } from "react-router-dom";
 import { Button, TextField, Link } from "@material-ui/core";
-
+import "./CSS/Login.css"
 const Register = () => {
 
   let navigate = useNavigate();
@@ -73,6 +73,7 @@ const Register = () => {
 
 
       return (
+
       <div
         style={{
           backgroundImage: "url(images/BackgroungIMG.jpg)",
@@ -89,6 +90,7 @@ const Register = () => {
             paddingBottom: "200px",
           }}
         >
+        <div className="box">
           <div>
             <h2>Register</h2>
           </div>
@@ -182,6 +184,7 @@ const Register = () => {
             <Link href="/">Login</Link>
           </div>
         </div>
+      </div>
       </div>
     );
   }

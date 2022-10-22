@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useLocation } from "react-router-dom";
 import "./CSS/SingleProd.css";
+import swal from "sweetalert";
 
 const Singleproduct = ({ num }) => {
   let location = useLocation();
@@ -15,7 +16,34 @@ const Singleproduct = ({ num }) => {
       });
   }, []);
 
-  
+  // get local storage userInfo
+  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+
+  const addtocart = () => {
+    fetch("http://localhost:4000/api/usercart/addtocart", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        user_id: userInfo.id,
+        Product_name: SingleProduct.Product_name,
+        Company_name: SingleProduct.Company_name,
+        Product_no: SingleProduct.Product_no,
+        Qty: 1,
+        Feature: SingleProduct.Feature,
+        Price: SingleProduct.Price,
+        Product_cat: SingleProduct.Product_cat,
+        Product_sub_cat: SingleProduct.Product_sub_cat,
+      }),
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        if(data){
+          swal("Successfull", "Product added to cart", "success");
+        }
+      });
+  };
 
   return (
     <div className="SP-container">
@@ -34,7 +62,7 @@ const Singleproduct = ({ num }) => {
             {SingleProduct.Qty > 0 ? "In Stock" : "Not Available"}
           </h3>
           {SingleProduct.Qty > 0 && (
-            <button type="submit" className="btn">
+            <button type="submit" className="btn" onClick={addtocart}>
               Add to Cart
             </button>
           )}

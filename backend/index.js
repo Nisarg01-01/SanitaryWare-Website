@@ -17,6 +17,7 @@ app.use("/api/user", require("./routes/User"));
 app.use("/api/product", require("./routes/product"));
 app.use("/api/manufacturers", require("./routes/Manufacturer"));
 app.use("/api/usercart", require("./routes/UserCart"));
+app.use("/api/order", require("./routes/Order"));
 
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}!`);

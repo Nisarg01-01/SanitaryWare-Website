@@ -26,7 +26,7 @@ router.get("/company/:comp", async (req, res) => {
 // get products with category at Tiles
   router.get("/category/:cat", async (req, res) => {
     try {
-      const products = await Product.find({ category: req.params.cat });
+      const products = await Product.find({ Product_cat: req.params.cat });
       res.json(products);
     } catch (err) {
       res.status(500).send("Server Error");
@@ -63,6 +63,24 @@ router.get("/company/:comp", async (req, res) => {
       res.status(500).send("Server Error");
     }
   });
+
+  // get with id
+  router.get("/:id", async (req, res) => {
+    try {
+      const product = await Product.findById(req.params.id);
+      if (!product) {
+        return res.status(404).json({ msg: "Product not found" });
+      }
+      res.json(product);
+    } catch (err) {
+      if (err.kind === "ObjectId") {
+        return res.status(404).json({ msg: "Product not found" });
+      }
+
+      res.status(500).send("Server Error");
+    }
+  });
+  
 
 // delete a specifc product by Id
 router.delete("/:id", async (req, res) => {
