@@ -5,7 +5,7 @@ import "./CSS/Product.css";
 const Product = () => {
   const [product, setProduct] = useState([]);
   useEffect(() => {
-    fetch("http://localhost:4000/api/product")
+    fetch("http://localhost:4000/api/product/category/Sanitary_ware")
       .then((res) => res.json())
       .then((data) => {
         setProduct(data);

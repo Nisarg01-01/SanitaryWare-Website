@@ -10,11 +10,8 @@ const HeroSection = ({ title }) => {
         <div className="herosection__left">
           <h1 className="herosection__left__title">{name}</h1>
           <p className="herosection__left__subtitle">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed
-            euismod, nunc vel tincidunt lacinia, nisl nisl aliquet nunc, nec
-            aliquet nisl nisl sit amet nisl. Sed euismod, nunc vel tincidunt
-            lacinia, nisl nisl aliquet nunc, nec aliquet nisl nisl sit amet
-            nisl.
+              Om Enterprises Redside In vadodara , we have all type of products for Sanitary ware and also tiles
+              .Sanitary ware products can be bought from our website and Tiles can be bought from showroom
           </p>
           <NavLink to="/category">
             <button> Shop Now</button>

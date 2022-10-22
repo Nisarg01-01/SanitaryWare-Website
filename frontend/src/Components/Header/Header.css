@@ -60,6 +60,16 @@
   color: white;
 }
 
+.UserIcon{
+  position: relative;
+}
+
+.User{
+  position: relative;
+  font-size: 2rem;
+  color: white;
+}
+
 .trolleyandcount .CartCount{
   position: absolute;
   place-items: center;

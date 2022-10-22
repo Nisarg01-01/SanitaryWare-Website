@@ -1,0 +1,49 @@
+.containercart{
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin: 30px;
+    width: auto;    
+}
+
+.prodcard{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #e6e6e6;
+}
+
+.Cardtitle{
+    width: 200px;
+    margin-right: 2rem;
+    margin-left: 1rem;
+}
+
+.pricetag{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.Dynamic{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin-left: 15rem;
+    margin-right: 1rem;
+}
+
+.qtn{
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+.totalandorder{
+    display: flex;
+    flex-direction: row;
+    text-align: left;
+    margin: 30px;
+    justify-content: space-between;
+}
