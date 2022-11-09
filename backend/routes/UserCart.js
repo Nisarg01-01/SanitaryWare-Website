@@ -27,7 +27,6 @@ router.get("/count/:id", async (req, res) => {
   }
 });
 
-
 // add product to array with  user_id
 router.post(
   "/addtocart",
@@ -43,8 +42,11 @@ router.post(
     check("Product_sub_cat", "Product_sub_cat is required").not().isEmpty(),
   ],
   async (req, res) => {
+    console.log(req.body);
     const errors = validationResult(req);
+
     if (!errors.isEmpty()) {
+      console.log('hello');
       return res.status(400).json({ errors: errors.array() });
     }
 
@@ -61,10 +63,22 @@ router.post(
     } = req.body;
 
     try {
-      let userCart = await UserCart.findOne({ user_id: user_id });
-      if (userCart) {
+      const usecart = await UserCart.findOne({ user_id: user_id });
+      console.log(usecart);
+      if (usecart) {
         // update
-        userCart.Products.push({
+        // check if product already exists by Product_no
+        const productIndex = usecart.Products.findIndex(
+          (product) => product.Product_no === Product_no
+        );
+
+        if (productIndex !== -1) {
+          // product exists
+          usecart.Products[productIndex].Qty += 1;
+        }
+         else {
+          // product does not exist
+          usecart.Products.push({
             Product_name,
             Company_name,
             Product_no,
@@ -73,29 +87,31 @@ router.post(
             Price,
             Product_cat,
             Product_sub_cat,
-        });
-        await userCart.save();
+          });
+        }
+        await usecart.save();
         return res.send(true);
       }
       // create
       userCart = new UserCart({
         user_id,
         Products: [
-            {
-                Product_name,
-                Company_name,
-                Product_no,
-                Qty,
-                Feature,
-                Price,
-                Product_cat,
-                Product_sub_cat,
-            },
+          {
+            Product_name,
+            Company_name,
+            Product_no,
+            Qty,
+            Feature,
+            Price,
+            Product_cat,
+            Product_sub_cat,
+          },
         ],
       });
       await userCart.save();
-      res.send(true);
+      return res.send(true);
     } catch (err) {
+      console.log('hello');
       console.error(err.message);
       res.status(500).send("Server Error");
     }

@@ -17,12 +17,14 @@ const Singleproduct = ({ num }) => {
   }, []);
 
   // get local storage userInfo
-  const userInfo = JSON.parse(localStorage.getItem("userInfo"));
+  const userInfo = JSON.parse(localStorage.getItem("user"));
 
   const addtocart = () => {
+    console.log(userInfo);
     fetch("http://localhost:4000/api/usercart/addtocart", {
       method: "POST",
       headers: {
+        
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -39,7 +41,7 @@ const Singleproduct = ({ num }) => {
     })
       .then((res) => res.json())
       .then((data) => {
-        if(data){
+        if (data) {
           swal("Successfull", "Product added to cart", "success");
         }
       });
@@ -58,10 +60,9 @@ const Singleproduct = ({ num }) => {
           <h3 className="text">Company Name:{SingleProduct.Company_name}</h3>
           <h3 className="text">Description: {SingleProduct.Feature}</h3>
           <h3 className="text">
-            Availability:{" "}
-            {SingleProduct.Qty > 0 ? "In Stock" : "Not Available"}
+            Availability: {SingleProduct.Qty > 0 ? "In Stock" : "Not Available"}
           </h3>
-          {SingleProduct.Qty > 0 && (
+          {SingleProduct.Product_cat !== "Tiles" && SingleProduct.Qty > 0 && (
             <button type="submit" className="btn" onClick={addtocart}>
               Add to Cart
             </button>

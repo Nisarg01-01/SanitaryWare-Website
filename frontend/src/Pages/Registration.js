@@ -61,7 +61,7 @@ const Register = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    localStorage.setItem('userInfo', JSON.stringify(data.user));
+                    localStorage.setItem('user', JSON.stringify(data.user));
                     navigate("/");
                 })
                 .catch(err => {
