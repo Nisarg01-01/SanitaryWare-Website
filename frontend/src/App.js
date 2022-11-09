@@ -31,7 +31,7 @@ function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/cart" element={<Cart />} />
             <Route path="/SingleProduct" element={<SingleProduct />} />
-            <Route path="/feedback" element={<FeedbackPage />} />
+            <Route path="/Feedback" element={<FeedbackPage />} />
             <Route path="/ProfilePage" element={<ProfilePage />} />
             <Route path="*" element={<ErrorPage/>} />
           </Routes>
