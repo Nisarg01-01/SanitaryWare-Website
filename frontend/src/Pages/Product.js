@@ -90,7 +90,7 @@ const Product = () => {
             <NavLink to="/SingleProduct" state={item.Product_no} className="Link">
               <div className="card" key={index}>
                 <div className="image">
-                  <img src="/images/Kohler.jpg" alt={item.Product_name} />
+                  <img src={item.Product_img} alt={item.Product_name} />
                 </div>
                 <div className="details">
                   <h1 className="prodname">{item.Product_name}</h1>

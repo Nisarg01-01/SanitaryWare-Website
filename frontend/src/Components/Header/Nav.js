@@ -15,28 +15,24 @@ const Nav = () => {
         <img src="images/CompanyLogo.png" alt="logo" className="imglogo" />
       </NavLink>
       <nav>
-        <ul className="List">
-          {/* <li>
-            <NavLink to="/category">Category</NavLink>
-          </li> */}
-          <li>
-            <NavLink to="/Tiles">Tiles</NavLink>
-          </li>
-          <li>
-            <NavLink to="/product">Product</NavLink>
-          </li>
-          <li>
-            <NavLink to="/aboutus">About</NavLink>
-          </li>
-          <li>
-            <NavLink to="/contact">Contact</NavLink>
-          </li>
-          <li>
-            <Search />
-          </li>
-          {/* Display last two if localstorage hase userInfo is present */}
-          {userInfo && (
-            <>
+        {userInfo && (
+          <>
+            <ul className="List">
+              <li>
+                <NavLink to="/Tiles">Tiles</NavLink>
+              </li>
+              <li>
+                <NavLink to="/product">Product</NavLink>
+              </li>
+              <li>
+                <NavLink to="/aboutus">About</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact">Contact</NavLink>
+              </li>
+              <li>
+                <Search />
+              </li>
               <li>
                 <NavLink to="/cart" className="trolleyandcount">
                   <FiShoppingCart className="trolley" />
@@ -47,9 +43,33 @@ const Nav = () => {
                   <CgProfile className="User" />
                 </NavLink>
               </li>
-            </>
-          )}
-        </ul>
+            </ul>
+          </>
+        )}
+        {!userInfo && (
+          <>
+            <ul className="List">
+              {/* <li>
+            <NavLink to="/category">Category</NavLink>
+          </li> */}
+              <li>
+                <NavLink to="/Tiles">Tiles</NavLink>
+              </li>
+              <li>
+                <NavLink to="/product">Product</NavLink>
+              </li>
+              <li>
+                <NavLink to="/aboutus">About</NavLink>
+              </li>
+              <li>
+                <NavLink to="/contact">Contact</NavLink>
+              </li>
+              <li>
+                <Search />
+              </li>
+            </ul>
+          </>
+        )}
       </nav>
     </header>
   );

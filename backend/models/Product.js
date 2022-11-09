@@ -36,6 +36,7 @@ const ProductSchema = new Schema({
   },
   Product_img: {
     type: String,
+    default: "images/Kohler.jpg",
   },
   Product_cat: {
     type: String,

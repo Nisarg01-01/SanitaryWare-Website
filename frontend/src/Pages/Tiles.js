@@ -1,5 +1,6 @@
 import React,{useState,useEffect} from 'react';
 import { NavLink } from 'react-router-dom';
+import "./CSS/Tiles.css";
 
 const Tiles = () => {
     const [product, setProduct] = useState([]);
@@ -20,7 +21,7 @@ const Tiles = () => {
             <NavLink to="/SingleProduct" state={item.Product_no} className="Link">
               <div className="card" key={index}>
                 <div className="image">
-                  <img src="/images/Kohler.jpg" alt={item.Product_name} />
+                  <img src={item.Product_img} alt={item.Product_name} />
                 </div>
                 <div className="details">
                   <h1 className="prodname">{item.Product_name}</h1>

@@ -24,7 +24,6 @@ const Singleproduct = ({ num }) => {
     fetch("http://localhost:4000/api/usercart/addtocart", {
       method: "POST",
       headers: {
-        
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
@@ -51,7 +50,7 @@ const Singleproduct = ({ num }) => {
     <div className="SP-container">
       <div className="grid-two-column">
         <div className="SP-image">
-          <img src="images/Kohler.jpg" alt="" />
+          <img src={SingleProduct.Product_img} alt="" />
         </div>
         <div className="SP-details">
           <h1 className="proname">{SingleProduct.Product_name}</h1>
