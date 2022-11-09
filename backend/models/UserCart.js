@@ -45,8 +45,8 @@ const UserCartSchema = new Schema({
     },
   ],
   total_price: {
-    type: Number,
-    required: [true, "Total Price is required"],
+    type: Number
+    // required: [true, "Total Price is required"],
   },
 });
 

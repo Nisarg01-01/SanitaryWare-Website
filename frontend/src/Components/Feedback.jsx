@@ -6,6 +6,8 @@ import 'react-toastify/dist/ReactToastify.css';
 import "../Pages/CSS/Feedback.css";
 
 function Feedback() {
+
+	const user = JSON.parse(localStorage.getItem("user"));
 	const [info, setInfo] = useState({
 		name: '',
 		email: '',
@@ -73,71 +75,40 @@ function Feedback() {
 	};
 
 	return (
-		<div className='form'>
-			<ToastContainer
-				position='top-right'
-				autoClose={5000}
-				hideProgressBar={false}
-				newestOnTop={false}
-				closeOnClick
-				rtl={false}
-				pauseOnFocusLoss
-				draggable
-			/>
-			<ToastContainer />
-			{/* upload files */}
-            <Button onClick={uploadWidget} className='button'>
-				{uploadPhotosButtonText}
-			</Button>
-			<Form action="https://formspree.io/f/mdojddww" method="POST">
-				{/* Name */}
-				<Form.Group>
-					<Form.Label>Name</Form.Label>
-					<Form.Control
-						value={name}
-						onChange={handleChange('name')}
-						type='name'
-						placeholder='Enter your name'
-						required
-					/>
-				</Form.Group>
-				{/* Phone */}
-				<Form.Group>
-					<Form.Label>Phone</Form.Label>
-					<Form.Control
-						value={phone}
-						onChange={handleChange('phone')}
-						type='phone'
-						placeholder='Enter your phone number'
-						required
-					/>
-				</Form.Group>
-				{/* email */}
-				<Form.Group>
-					<Form.Label>Email Adress</Form.Label>
-					<Form.Control
-						value={email}
-						onChange={handleChange('email')}
-						type='email'
-						placeholder='Enter email'
-						required
-					/>
-				</Form.Group>
-				{/* text area */}
-				<Form.Group>
-					<Form.Label>Description</Form.Label>
-					<Form.Control
-						onChange={handleChange('message')}
-						as='textarea'
-						value={message}
-						rows={3}
-						required
-					/>
-				</Form.Group>
-
-				<Button type='submit'>{buttonText}</Button>
-			</Form>
-		</div>
+		<div className="container">
+        <div className="contact-form">
+          <form action="https://formspree.io/f/mnqrlldq" method="POST" className="contact-inputs">
+            <input
+              type="text"
+              name="username"
+			  value={user.name}
+              placeholder="Your Name"
+              required
+              autoComplete="off"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+			  value={user.Email}
+              required
+              autoComplete="off"
+            />
+            <textarea
+              name="feedback"
+              id=""
+              cols="30"
+              rows="10"
+              placeholder="Feedback"
+              required
+              autoComplete="off"
+            ></textarea>
+            <button type="submit" className="feedbacksubmit">
+              Send
+            </button>
+          </form>
+        </div>
+      </div>
 	);
 }
 

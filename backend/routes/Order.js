@@ -19,20 +19,27 @@ router.post(
         if (!errors.isEmpty()) {
             return res.status(400).json({ errors: errors.array() });
         }
-
         const { User_id, Products, total_price, date, Paymentstatus } = req.body;
 
+        //check if user exist then replace the Products array else not then create new user with Products array
         try {
-            const newOrder = new Order({
+            let order = await Order.findOne({ User_id });
+            if (order) {
+                order.Products = Products;
+                order.total_price = total_price;
+                order.Paymentstatus = Paymentstatus;
+                await order.save();
+                return res.json(true);
+            }
+            order = new Order({
                 User_id,
                 Products,
                 total_price,
                 date,
                 Paymentstatus,
             });
-        
-            const order = await newOrder.save();
-            res.send(true);
+            await order.save();
+            res.json(true);
         } catch (err) {
             console.error(err.message);
             res.status(500).send("Server Error");
